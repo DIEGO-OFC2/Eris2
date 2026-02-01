@@ -528,6 +528,7 @@ declare namespace Dysnomia {
   // Client
   interface ClientOptions {
     allowedMentions?: AllowedMentions;
+    caching?: CachingOptions;
     defaultImageFormat?: string;
     defaultImageSize?: number;
     gateway?: GatewayOptions;
@@ -559,7 +560,9 @@ declare namespace Dysnomia {
     decryptionFailureTolerance?: number;
     ws?: unknown;
   }
-
+  interface CachingOptions {
+    disableMaps?: boolean;
+  }
   interface EditSelfOptions {
     avatar?: string | null;
     banner?: string | null;
